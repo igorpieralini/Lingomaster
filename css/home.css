@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Zilla Slab", serif;
+}
+
+html, body {
+    height: 100%;
+    overflow-x: hidden; /* Impede rolagem horizontal, mas permite rolagem vertical */
+}
+
+header {
+    width: 100%;
+    z-index: 10;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); /* Gradiente de preto para transparente */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px; /* Altura fixa do header */
+    position: absolute; /* Define o header como sobreposto, mas não fixo */
+    top: 0; /* Alinha o header ao topo */
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ddd;
+}
+
+.logo_nav {
+    display: flex;
+    align-items: center;
+    margin: 0 15px;
+}
+
+.logo_nav img {
+    height: 160px;
+    vertical-align: middle;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100vw;
+    height: 70vh; /* Define a altura do carrossel para 70% da altura da viewport */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#carouselSlide {
+    display: flex;
+    width: 100%;
+    height: 100%; /* Garante que o contêiner de slides ocupe toda a altura do carrossel */
+    transition: transform 0.5s ease; /* Suaviza a transição entre os slides */
+}
+
+.carousel-item {
+    min-width: 100%; /* Cada item ocupa 100% da largura do contêiner */
+    height: 100%; /* Cada item ocupa 100% da altura do contêiner */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%; /* Ocupa 100% da altura do contêiner */
+    object-fit: cover; /* Garante que a imagem cubra o contêiner sem distorções */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.carousel-item h2,
+.carousel-item p{
+    position: relative;
+    z-index: 1;
+    color: white;
+    margin: 5px 0; /* Espaçamento entre os elementos */
+}
+
+.carousel-item h2 {
+    font-size: 1.8rem; /* Ajuste de tamanho do título */
+}
+
+.carousel-item p {
+    font-size: 1rem;
+    max-width: 80%; /* Limita a largura do texto */
+}
+
+.carousel-item button {
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-item button:hover {
+}
+
+.button-container {
+    display: flex;
+    width: 100%;
+}
+
+.tech-button {
+    flex: 1;
+    padding: 20px 0;
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    border: 1px black solid;
+}
+
+.tech-button.active {
+    color: #E9732E; /* Cor laranja para o botão ativo */
+    border: none; /* Remove a borda para o botão ativo */
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+    .nav-links {
+        flex-direction: column;
+        margin: 10px 0;
+    }
+    .nav-links li {
+        margin: 5px 0;
+    }
+    .logo_nav img {
+        margin: 15px 0;
+    }
+}
+
+.container-cursos{
+    width: 100%;
+    height: 400px;
+    margin-top: 70px;
+
+}
+
+.curso-html{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+}
+
+.curso-html p{
+    width: 30%;
+}
+
+.curso-php{
+
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+}
+
+.curso-php p{
+    width: 30%;
+}
+
+.curso-mysql{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+}
+
+.curso-mysql p{
+    width: 30%;
+}
+
+.curso-css{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+}
+
+.curso-css p{
+    width: 30%;
+}
+
+.curso-javascript{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+}
+
+.curso-javascript p{
+    width: 30%;
+}
+
+.curso-tailwind{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+}
+
+.curso-tailwind  p{
+    width: 30%;
+}
+
+
+iframe{
+    border: 2px black solid;
+    border-radius: 10px;
+}
+
