@@ -305,7 +305,7 @@ body {
     text-align: center;
     width: 50%; /* Cada imagem ocupa 50% inicialmente */
     position: relative;
-    transition: width 0.5s ease-in-out, opacity 0.3s ease-in-out; /* Suaviza largura e opacidade */
+    transition: width 0.8s ease-in-out, opacity 0.8s ease-in-out; /* Suaviza largura e opacidade */
     overflow: hidden;
 }
 
@@ -327,7 +327,7 @@ body {
 .imagem-preenchimento, .imagem-preenchimento2 {
     width: 0%; /* Inicialmente não ocupa espaço */
     overflow: hidden;
-    transition: width 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Suaviza a expansão e desaparecimento */
+    transition: width 0.8s ease-in-out, opacity 0.8s ease-in-out; /* Suaviza expansão e desaparecimento */
     opacity: 0; /* Invisível inicialmente */
 }
 
@@ -340,7 +340,7 @@ body {
 .imagem-fundador.hidden, .imagem-fundador2.hidden {
     opacity: 0; /* Esconde a imagem oposta */
     pointer-events: none; /* Remove a interação */
-    transition: opacity 0.5s ease-in-out; /* Suaviza desaparecimento */
+    transition: opacity 0.8s ease-in-out; /* Suaviza desaparecimento */
 }
 
 .imagem-fundador.expanded, .imagem-fundador2.expanded {
@@ -349,7 +349,7 @@ body {
 
 .imagem-preenchimento.active, .imagem-preenchimento2.active {
     width: 50%; /* Preenche o lado oposto */
-    opacity: 1; /* Suavemente visível */
+    opacity: 1; /* Torna visível suavemente */
 }
 
 .irmaos-p{

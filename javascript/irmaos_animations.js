@@ -16,13 +16,12 @@ document.querySelectorAll('.imagem-fundador, .imagem-fundador2').forEach((fundad
     });
 
     fundador.addEventListener('mouseleave', () => {
-        // Transição suave de saída
-        setTimeout(() => {
-            document.querySelectorAll('.imagem-fundador, .imagem-fundador2').forEach((other) => {
-                other.classList.remove('hidden', 'expanded'); // Restaura as imagens suavemente
-            });
+        // Remove as classes com transições suaves para ambas as imagens
+        document.querySelectorAll('.imagem-fundador, .imagem-fundador2').forEach((other) => {
+            other.classList.remove('hidden'); // Gradualmente restaura a opacidade
+            other.classList.remove('expanded'); // Gradualmente restaura a largura original
+        });
 
-            preenchimento.classList.remove('active'); // Esconde preenchimento suavemente
-        }, 100); // Pequeno atraso para suavizar a transição
+        preenchimento.classList.remove('active'); // Gradualmente oculta o preenchimento
     });
 });
