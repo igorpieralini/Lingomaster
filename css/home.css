@@ -7,20 +7,21 @@
 
 html, body {
     height: 100%;
-    overflow-x: hidden; /* Impede rolagem horizontal, mas permite rolagem vertical */
+    overflow-x: hidden;
 }
 
+/* Header e Navbar */
 header {
     width: 100%;
     z-index: 10;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); /* Gradiente de preto para transparente */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 80px; /* Altura fixa do header */
-    position: absolute; /* Define o header como sobreposto, mas não fixo */
-    top: 0; /* Alinha o header ao topo */
+    position: fixed; /* Define o header como fixo para sobrepor o carrossel */
+    top: 0;
 }
 
 .navbar {
@@ -68,26 +69,27 @@ header {
     vertical-align: middle;
 }
 
-.carousel-container {
+/* Carrossel 1 */
+.carousel1-container {
     position: relative;
     width: 100vw;
-    height: 70vh; /* Define a altura do carrossel para 70% da altura da viewport */
+    height: 500px; /* Ajusta altura para compensar o header fixo */
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#carouselSlide {
+#carousel1-slide {
     display: flex;
     width: 100%;
-    height: 100%; /* Garante que o contêiner de slides ocupe toda a altura do carrossel */
-    transition: transform 0.5s ease; /* Suaviza a transição entre os slides */
+    height: 500px;
+    transition: transform 0.5s ease;
 }
 
-.carousel-item {
-    min-width: 100%; /* Cada item ocupa 100% da largura do contêiner */
-    height: 100%; /* Cada item ocupa 100% da altura do contêiner */
+.carousel1-item {
+    min-width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -96,42 +98,71 @@ header {
     text-align: center;
 }
 
-.carousel-image {
+.carousel1-image {
     width: 100%;
-    height: 100%; /* Ocupa 100% da altura do contêiner */
-    object-fit: cover; /* Garante que a imagem cubra o contêiner sem distorções */
+    height: 100%;
+    object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
 }
 
-.carousel-item h2,
-.carousel-item p{
+.carousel1-item h2,
+.carousel1-item p {
     position: relative;
     z-index: 1;
     color: white;
-    margin: 5px 0; /* Espaçamento entre os elementos */
+    margin: 5px 0;
 }
 
-.carousel-item h2 {
-    font-size: 1.8rem; /* Ajuste de tamanho do título */
+.carousel1-item h2 {
+    font-size: 1.8rem;
 }
 
-.carousel-item p {
+.carousel1-item p {
     font-size: 1rem;
-    max-width: 80%; /* Limita a largura do texto */
+    max-width: 80%;
 }
 
-.carousel-item button {
+.carousel1-item button {
     padding: 8px 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-.carousel-item button:hover {
+.carousel1-item button:hover {
+    background-color: #ddd;
 }
 
+/* Botões de navegação do Carrossel 1 */
+.carousel1-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.carousel1-btn.prev {
+    left: 10px;
+}
+
+.carousel1-btn.next {
+    right: 10px;
+}
+
+.carousel1-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Outros Estilos */
 .button-container {
     display: flex;
     width: 100%;
@@ -147,12 +178,14 @@ header {
     text-align: center;
     cursor: pointer;
     transition: background-color 0.5s;
-    border: 1px black solid;
+    border: 1px solid black;
+    box-shadow: inset 1px 0 2px 1px darkgray;
 }
 
 .tech-button.active {
-    color: #E9732E; /* Cor laranja para o botão ativo */
-    border: none; /* Remove a borda para o botão ativo */
+    color: #E9732E;
+    border: none;
+    box-shadow: none;
 }
 
 @media (max-width: 768px) {
@@ -171,83 +204,36 @@ header {
     }
 }
 
-.container-cursos{
+/* Estilos para cursos */
+.container-cursos {
     width: 100%;
     height: 400px;
     margin-top: 70px;
-
 }
 
-.curso-html{
+.curso-html,
+.curso-php,
+.curso-mysql,
+.curso-css,
+.curso-javascript,
+.curso-tailwind {
     display: flex;
     justify-content: space-around;
     text-align: center;
     align-items: center;
 }
 
-.curso-html p{
+.curso-html p,
+.curso-php p,
+.curso-mysql p,
+.curso-css p,
+.curso-javascript p,
+.curso-tailwind p {
     width: 30%;
 }
 
-.curso-php{
-
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-    align-items: center;
-}
-
-.curso-php p{
-    width: 30%;
-}
-
-.curso-mysql{
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-    align-items: center;
-}
-
-.curso-mysql p{
-    width: 30%;
-}
-
-.curso-css{
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-    align-items: center;
-}
-
-.curso-css p{
-    width: 30%;
-}
-
-.curso-javascript{
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-    align-items: center;
-}
-
-.curso-javascript p{
-    width: 30%;
-}
-
-.curso-tailwind{
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-    align-items: center;
-}
-
-.curso-tailwind  p{
-    width: 30%;
-}
-
-
-iframe{
-    border: 2px black solid;
+/* Estilos do iframe */
+iframe {
+    border: 2px solid black;
     border-radius: 10px;
 }
-

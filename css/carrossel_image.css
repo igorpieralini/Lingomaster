@@ -1,0 +1,94 @@
+/* Centraliza e estiliza o contêiner do carrossel 2 */
+.carousel2-container {
+    position: relative;
+    width: 100vw;
+    height: 600px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Área de slides do carrossel 2 */
+.carousel2-slide {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease;
+}
+
+/* Slide individual do carrossel 2 */
+.carousel2-item {
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+}
+
+.carousel2-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.carousel2-item h2,
+.carousel2-item p {
+    position: relative;
+    z-index: 1;
+    color: white;
+    margin: 5px 0;
+}
+
+.carousel2-item h2 {
+    font-size: 1.8rem;
+}
+
+.carousel2-item p {
+    font-size: 1rem;
+    max-width: 80%;
+}
+
+.carousel2-item button {
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel2-item button:hover {
+    background-color: #ddd;
+}
+
+/* Botões de navegação do carrossel 2 */
+.carousel2-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.carousel2-btn.prev {
+    left: 10px;
+}
+
+.carousel2-btn.next {
+    right: 30px;
+}
+
+.carousel2-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}

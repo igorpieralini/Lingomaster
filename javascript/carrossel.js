@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const carouselSlide = document.getElementById('carouselSlide');
-    const slides = document.querySelectorAll('.carousel-item');
+    const carouselSlide = document.getElementById('carousel1-slide');
+    const slides = document.querySelectorAll('.carousel1-item');
     let currentIndex = 0;
 
     function updateSlidePosition() {

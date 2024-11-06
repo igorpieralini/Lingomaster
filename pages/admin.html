@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Configurações do Carrossel</title>
+    <script>
+        // Verifica a autenticação ao carregar a página
+        document.addEventListener('DOMContentLoaded', checkAuth);
+    </script>
+    <link rel="stylesheet" href="../css/admin.css"> <!-- Se necessário, adicione um CSS para estilização -->
+</head>
+<body>
+<header>
+    <h1>Painel de Administração</h1>
+    <button onclick="logout()">Logout</button>
+</header>
+
+<main>
+    <!-- Upload de Imagens -->
+    <section id="image-upload-section">
+        <h2>Upload de Imagens</h2>
+        <input type="file" id="carousel2-imageUpload" multiple />
+        <button onclick="uploadImage()">Upload</button>
+    </section>
+
+    <!-- Lista de Imagens Carregadas -->
+    <section id="image-list-section">
+        <h2>Imagens Carregadas</h2>
+        <div id="carousel2-imageList"></div>
+    </section>
+
+    <!-- Configuração de Tempo de Transição -->
+    <section id="carousel-time-section">
+        <h2>Definir Tempo de Transição do Carrossel (segundos)</h2>
+        <label for="carouselTime2"></label><input type="number" id="carouselTime2" min="1" placeholder="Tempo em segundos" />
+        <button id="saveTimeBtn2">Salvar Tempo</button>
+    </section>
+
+    <!-- Link para Visualizar o Carrossel -->
+    <section id="view-carousel-section">
+        <a href="../index.html">Ver Carrossel</a>
+    </section>
+</main>
+
+<script src="../javascript/auth.js"></script>
+<script src="../javascript/carrosel_image.js"></script> <!-- Carrega o JavaScript com as funcionalidades do carrossel -->
+</body>
+</html>

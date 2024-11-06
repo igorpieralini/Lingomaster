@@ -4,7 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrossel com Navegação Sobreposta</title>
+
+    <style>
+        /* Centraliza o contêiner no centro da página */
+        .divider-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 80%;
+            margin: 20px auto; /* Centraliza a div horizontalmente na página */
+        }
+
+        /* Estilo da linha para unir ao fundo laranja da div central */
+        .line {
+            flex-grow: 1;
+            height: 8px;
+            background-color: #f97316; /* Cor laranja da linha */
+            margin: 0 -40px; /* Sobrepõe um pouco a div central */
+        }
+
+        /* Estilo do losango arredondado no centro */
+        .center-text {
+            padding: 20px 70px;
+            color: white;
+            font-weight: bold;
+            font-size: 1.5rem;
+            background-color: #f97316;
+            text-align: center;
+            white-space: nowrap;
+
+            /* Reduz a margem para unir com a linha */
+            margin-left: -4px;
+            margin-right: -4px;
+
+            /* Define o formato de losango arredondado */
+            clip-path: polygon(15% 50%, 25% 15%, 75% 15%, 85% 50%, 75% 85%, 25% 85%);
+            border-radius: 20px; /* Arredonda as bordas para suavizar as pontas */
+        }
+    </style>
+
     <link rel="stylesheet" href="css/home.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/carrossel_image.css">
 </head>
 <body>
 
@@ -27,22 +68,22 @@
 </header>
 
 <main>
-    <div class="carousel-container">
-        <div id="carouselSlide">
-            <div class="carousel-item">
-                <img src="images/download.jpg" alt="Image 1" class="carousel-image">
+    <div class="carousel1-container">
+        <div id="carousel1-slide">
+            <div class="carousel1-item">
+                <img src="images/download.jpg" alt="Image 1" class="carousel1-image">
                 <h2 style="color: white; font-weight: bold; font-size: 300%">POSSUÍMOS CURSOS DE</h2>
                 <p style="color: #E9732E; font-weight: bold; font-size: 300%">6 LINGUAGENS!</p>
-                <button style="color:  white; background-color: #09222E; margin-top: 20px; border: 0.5px solid #09222E; border-radius: 40px; font-size: 150%">Conheça mais sobre</button>
+                <button style="color: white; background-color: #09222E; margin-top: 20px; border: 0.5px solid #09222E; border-radius: 40px; font-size: 150%">Conheça mais sobre</button>
             </div>
-            <div class="carousel-item">
-                <img src="images/download2.jpg" alt="Image 2" class="carousel-image">
+            <div class="carousel1-item">
+                <img src="images/download2.jpg" alt="Image 2" class="carousel1-image">
                 <h2 style="color: white; font-weight: bold; font-size: 300%">NÃO PERCA TEMPO E APRENDA A</h2>
                 <p style="color: white; font-weight: bold; font-size: 300%">PROGRAMAR JÁ</p>
-                <button style="color: black;background-color: white; margin-top: 20px; border: 0.5px solid white; border-radius: 40px; font-size: 150%">Entre em contato</button>
+                <button style="color: black; background-color: white; margin-top: 20px; border: 0.5px solid white; border-radius: 40px; font-size: 150%">Entre em contato</button>
             </div>
-            <div class="carousel-item">
-                <img src="images/download2.jpg" alt="Image 2" class="carousel-image">
+            <div class="carousel1-item">
+                <img src="images/download2.jpg" alt="Image 3" class="carousel1-image">
                 <h2 style="color: white; font-weight: bold; font-size: 300%">LIVE TODA TERÇA-FEIRA</h2>
                 <p style="color: white; font-weight: bold; font-size: 300%">ÀS 19:00 NO NOSSO INSTAGRAM</p>
                 <button style="color: #E9732E; margin-top: 20px; font-size: 200%; text-decoration: underline; background-color: rgba(0, 0, 0, 0); border: none">Saiba mais</button>
@@ -87,6 +128,23 @@
             </div>
         </div>
     </div>
+
+    <div class="divider-container">
+        <div class="line"></div>
+        <div class="center-text" style="font-size: 240%">LIVES</div>
+        <div class="line"></div>
+    </div>
+
+    <div class="carousel2-container">
+        <button class="carousel2-btn prev" onclick="prevSlide2()">&#10094;</button>
+        <div class="carousel2-slide" id="carouselSlide2"></div>
+        <button class="carousel2-btn next" onclick="nextSlide2()">&#10095;</button>
+    </div>
+
+        <a id="login-link" href="pages/login.html">Fazer Login</a>
+        <a id="admin-link" href="pages/admin.html" style="display:none;">Ir para Admin</a>
+        <script src="javascript/carrossel.js" defer></script>  <!-- Carrega o script no final -->
+
 </main>
 
 <footer>
@@ -94,6 +152,7 @@
 </footer>
 
 <script src="javascript/carrossel.js"></script>
+<script src="javascript/carrosel_image.js"></script>
 <script src="javascript/onclick.js"></script>
 </body>
 </html>
