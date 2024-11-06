@@ -2,12 +2,21 @@
 const buttons = document.querySelectorAll(".tech-button");
 const cursos = document.querySelectorAll(".cursos > div");
 
+// Função para pausar vídeos do YouTube em iframes usando a API
+function pauseVideos() {
+    const iframes = document.querySelectorAll("iframe");
+    iframes.forEach(iframe => {
+        iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+    });
+}
+
 // Função para mostrar apenas o curso selecionado
 function showCurso(cursoClass) {
-    // Oculta todos os cursos
+    // Oculta todos os cursos e pausa seus vídeos
     cursos.forEach(curso => {
-        curso.style.display = "none";
+        curso.style.display = "none"; // Oculta o curso
     });
+    pauseVideos(); // Pausa vídeos após ocultar
 
     // Exibe apenas o curso correspondente
     const cursoToShow = document.querySelector(`.${cursoClass}`);

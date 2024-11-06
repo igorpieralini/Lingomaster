@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrossel com Navegação Sobreposta</title>
+    <title>Lingomaster</title>
 
     <style>
         /* Centraliza o contêiner no centro da página */
@@ -19,7 +19,7 @@
         .line {
             flex-grow: 1;
             height: 8px;
-            background-color: #f97316; /* Cor laranja da linha */
+            background-color: #E9732E; /* Cor laranja da linha */
             margin: 0 -40px; /* Sobrepõe um pouco a div central */
         }
 
@@ -29,7 +29,7 @@
             color: white;
             font-weight: bold;
             font-size: 1.5rem;
-            background-color: #f97316;
+            background-color: #E9732E;
             text-align: center;
             white-space: nowrap;
 
@@ -91,68 +91,162 @@
         </div>
     </div>
 
-    <div class="button-container">
-        <button class="tech-button">HTML</button>
-        <button class="tech-button">PHP</button>
-        <button class="tech-button">MySQL</button>
-        <button class="tech-button">CSS</button>
-        <button class="tech-button">JavaScript</button>
-        <button class="tech-button">TailWind</button>
-    </div>
+    <section id="linguagens">
+        <div class="button-container">
+            <button class="tech-button">HTML</button>
+            <button class="tech-button">PHP</button>
+            <button class="tech-button">MySQL</button>
+            <button class="tech-button">CSS</button>
+            <button class="tech-button">JavaScript</button>
+            <button class="tech-button">TailWind</button>
+        </div>
 
-    <div class="container-cursos">
-        <div class="cursos">
-            <div class="curso-html">
-                <iframe width="600px" height="300px" src="https://www.youtube.com/embed/epDCjksKMok?si=u-M8-PauPlKRRnke" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <p>Conteúdo do curso de HTML.</p>
-            </div>
-            <div class="curso-php">
-                <iframe width="600px" height="300px" src="https://www.youtube.com/embed/epDCjksKMok?si=u-M8-PauPlKRRnke" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <p>Conteúdo do curso de PHP.</p>
-            </div>
-            <div class="curso-mysql">
-                <iframe width="600px" height="300px" src="https://www.youtube.com/embed/epDCjksKMok?si=u-M8-PauPlKRRnke" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <p>Conteúdo do curso de MySQL.</p>
-            </div>
-            <div class="curso-css">
-                <iframe width="600px" height="300px" src="https://www.youtube.com/embed/epDCjksKMok?si=u-M8-PauPlKRRnke" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <p>Conteúdo do curso de CSS.</p>
-            </div>
-            <div class="curso-javascript">
-                <iframe width="600px" height="300px" src="https://www.youtube.com/embed/epDCjksKMok?si=u-M8-PauPlKRRnke" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <p>Conteúdo do curso de JavaScript.</p>
-            </div>
-            <div class="curso-tailwind">
-                <iframe width="600px" height="300px" src="https://www.youtube.com/embed/epDCjksKMok?si=u-M8-PauPlKRRnke" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <p>Conteúdo do curso de TailWind.</p>
+        <div class="container-cursos">
+            <div class="cursos">
+                <div class="curso-html">
+                    <iframe src="https://www.youtube.com/embed/epDCjksKMok?enablejsapi=1&si=u-M8-PauPlKRRnke"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                    </iframe>
+
+                    <p>
+                        <span>HTML</span> <span class="highlight">(HyperText Markup Language)</span> é a linguagem usada para estruturar páginas web. Com tags, ele <span class="highlight">organiza o conteúdo</span> em títulos, parágrafos, links e imagens, <span class="highlight">instruindo o navegador</span> sobre como exibir cada elemento. <span class="highlight">Trabalha junto com CSS</span>, para estilo, e <span class="highlight">JavaScript</span>, para interatividade.
+                    </p>
+                </div>
+                <div class="curso-php">
+                    <iframe src="https://www.youtube.com/embed/TfsO0BGvGn0?enablejsapi=1&si=7bPBaKqYvDGozWTy"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                    </iframe>
+
+                    <p>
+                        <span>PHP</span> <span class="highlight">(PHP: Hypertext Preprocessor)</span> é uma linguagem de programação amplamente usada para desenvolvimento web. Ela <span class="highlight">permite a criação de páginas dinâmicas</span>, interagindo com bancos de dados e manipulando dados do servidor. O PHP é <span class="highlight">executado no lado do servidor</span>, gerando HTML que é enviado para o navegador. Ele <span class="highlight">trabalha bem com MySQL</span> para armazenamento de dados e pode ser combinado com <span class="highlight">HTML, CSS e JavaScript</span> para criar aplicações web completas.
+                    </p>
+                </div>
+                <div class="curso-mysql">
+                    <iframe src="https://www.youtube.com/embed/Ofktsne-utM?enablejsapi=1&si=6YlpeZNex9oQh2aF"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                    </iframe>
+
+                    <p>
+                        <span>MySQL</span> <span class="highlight">(Structured Query Language)</span> é um sistema de gerenciamento de banco de dados relacional. Ele <span class="highlight">armazena e organiza dados</span>, permitindo consultas rápidas e eficientes. O MySQL é <span class="highlight">amplamente utilizado em aplicações web</span>, oferecendo suporte para grandes volumes de informações. Ele <span class="highlight">funciona bem com linguagens como PHP</span>, permitindo que sites dinâmicos sejam criados e gerenciados. Além disso, <span class="highlight">suporta comandos SQL</span> para manipulação e consulta de dados.
+                    </p>
+                </div>
+                <div class="curso-css">
+                    <iframe src="https://www.youtube.com/embed/HtVRRHoASes?si=_3icFbcTxWK0NaT3?enablejsapi=" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <p>
+                        <span>CSS</span> <span class="highlight">(Cascading Style Sheets)</span> é a linguagem usada para <span class="highlight">estilizar páginas web</span>. Ele permite definir <span class="highlight">cores, fontes, espaçamentos e layouts</span>, separando a estrutura do conteúdo, definida em HTML, da apresentação visual. O CSS <span class="highlight">trabalha com seletores</span> para aplicar estilos a elementos específicos e <span class="highlight">suporta responsividade</span>, garantindo que o site seja exibido corretamente em diferentes dispositivos.
+                    </p>
+                </div>
+                <div class="curso-javascript">
+                    <iframe src="https://www.youtube.com/embed/HtVRRHoASes?enablejsapi=1&si=_3icFbcTxWK0NaT3"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                    </iframe>
+
+                    <p>
+                        <span>JavaScript</span> <span class="highlight">(JS)</span> é uma linguagem de programação que <span class="highlight">adiciona interatividade às páginas web</span>. Ele permite <span class="highlight">manipular o DOM</span>, respondendo a eventos como cliques e pressionamentos de tecla. JavaScript <span class="highlight">trabalha junto com HTML e CSS</span> para criar experiências web dinâmicas e <span class="highlight">suporta frameworks como React e Angular</span>, facilitando o desenvolvimento de aplicações complexas. Além disso, <span class="highlight">pode ser executado tanto no navegador quanto no servidor</span> com Node.js.
+                    </p>
+                </div>
+                <div class="curso-tailwind">
+                    <iframe src="https://www.youtube.com/embed/w4xS1ZdTcr8?enablejsapi=1&si=l6zT57DQQlhPoDcb"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                    </iframe>
+
+                    <p>
+                        <span class="highlight">Tailwind</span> é um <span class="highlight">framework    utilitário para CSS</span> que permite criar designs modernos diretamente no HTML. Ele <span class="highlight">oferece classes prontas</span> para estilizar elementos sem a necessidade de escrever CSS personalizado. Com Tailwind, você pode <span class="highlight">personalizar rapidamente layouts e estilos</span>, garantindo consistência e produtividade. Além disso, ele <span class="highlight">suporta temas customizáveis</span> e <span class="highlight">facilita a criação de interfaces responsivas</span>.
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="divider-container">
-        <div class="line"></div>
-        <div class="center-text" style="font-size: 240%">LIVES</div>
-        <div class="line"></div>
-    </div>
 
-    <div class="carousel2-container">
-        <button class="carousel2-btn prev" onclick="prevSlide2()">&#10094;</button>
-        <div class="carousel2-slide" id="carouselSlide2"></div>
-        <button class="carousel2-btn next" onclick="nextSlide2()">&#10095;</button>
-    </div>
+    <section id="lives">
+        <div class="divider-container">
+            <div class="line"></div>
+            <div class="center-text" style="font-size: 240%">LIVES</div>
+            <div class="line"></div>
+        </div>
 
-        <a id="login-link" href="pages/login.html">Fazer Login</a>
-        <a id="admin-link" href="pages/admin.html" style="display:none;">Ir para Admin</a>
-        <script src="javascript/carrossel.js" defer></script>  <!-- Carrega o script no final -->
+        <div class="carousel2-container">
+            <button class="carousel2-btn prev" onclick="prevSlide2()">&#10094;</button>
+            <div class="carousel2-slide" id="carouselSlide2"></div>
+            <button class="carousel2-btn next" onclick="nextSlide2()">&#10095;</button>
+        </div>
+    </section>
 
+    <a id="login-link" href="pages/login.html">Fazer Login</a>
+    <a id="admin-link" href="pages/admin.html" style="display:none;">Ir para Admin</a>
+
+    <section id="sobre-nos">
+        <div class="section-header">
+            <hr class="line-left">
+            <h2>SOBRE NÓS</h2>
+            <hr class="line-right">
+        </div>
+
+        <div class="image-fundadores">
+            <div class="imagem-fundador">
+                <img src="images/luis.JPG" alt="Luiz">
+                <p>LUIZ</p>
+            </div>
+
+            <div class="imagem-preenchimento">
+                <img src="images/Logo%20light%20background.png" alt="Preenchimento">
+            </div>
+
+            <div class="imagem-preenchimento2">
+                <img src="images/Logo%20light%20background.png" alt="Preenchimento">
+            </div>
+
+            <div class="imagem-fundador2">
+                <img src="images/gabriel.JPG" alt="Gabriel">
+                <p>GABRIEL</p>
+            </div>
+        </div>
+
+        <p class="irmaos-p">A <span class="highlight">Lingomaster</span> foi fundada pelos irmãos <span class="highlight"> Gabriel</span> e <span class="highlight"> Luiz </span>, unidos pela paixão pela tecnologia e pela missão de tornar a programação acessível a todos. O projeto <span class="highlight"> começou no Instagram </span>, onde compartilharam dicas e tutoriais, e hoje se expande para uma plataforma completa, oferecendo <span class="highlight">cursos, mentorias  </span> e <span class="highlight"> materiais exclusivos </span>. Mais do que uma escola de programação, a Lingomaster é uma comunidade dedicada ao <span class="highlight">desenvolvimento pessoal</span> e <span class="highlight">profissional</span>, promovendo o crescimento e a evolução contínua de seus membros em cada etapa da jornada.</p>
+    </section>
+
+    <section id="missao">
+
+    </section>
+
+    <section id="valores">
+
+    </section>
+
+    <section id="contato">
+
+    </section>
 </main>
 
 <footer>
     <!-- Rodapé -->
 </footer>
 
-<script src="javascript/carrossel.js"></script>
+<script src="javascript/carrossel.js" defer></script>
 <script src="javascript/carrosel_image.js"></script>
 <script src="javascript/onclick.js"></script>
+<script src="javascript/animated.js"></script>
+<script src="javascript/irmaos_animations.js"></script>
 </body>
 </html>
