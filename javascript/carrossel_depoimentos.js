@@ -1,36 +1,18 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const items = Array.from(document.querySelectorAll('.item'));
-    let currentIndex = items.findIndex(item => item.classList.contains('active')); // Índice do item ativo inicial
-
-    if (currentIndex === -1) {
-        console.error('Nenhum item inicial possui a classe "active".');
-        return;
-    }
+    const carousel = document.querySelector('.carrossel');
+    const visibleItems = 3; // Sempre exibe 3 itens
+    let currentIndex = 0; // Inicia no primeiro item
 
     function atualizarCarrossel() {
-        items.forEach((item, index) => {
-            if (index === currentIndex) {
-                item.classList.add('active');
-                item.classList.remove('desactive');
-            } else {
-                item.classList.remove('active');
-                item.classList.add('desactive');
-            }
-        });
+        const offset = -currentIndex * (300 + 20); // 300px de largura + 20px de gap
+        carousel.style.transform = `translateX(${offset}px)`;
     }
 
-    function habilitarAnimacao() {
-        items.forEach(item => {
-            item.classList.add('animado'); // Adiciona animação após interação
-        });
-    }
-
-    window.moverCarrossel = function(direction) {
-        currentIndex = (currentIndex + direction + items.length) % items.length; // Loop infinito para frente e trás
-        habilitarAnimacao(); // Ativa animação ao clicar
+    window.moverCarrossel = function (direction) {
+        currentIndex = (currentIndex + direction + items.length) % items.length;
         atualizarCarrossel();
     };
 
-    // Inicializa sem animação
-    atualizarCarrossel();
+    atualizarCarrossel(); // Inicializa o carrossel na posição correta
 });

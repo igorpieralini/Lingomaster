@@ -498,63 +498,54 @@ body {
     margin: 0; /* Remove margens */
 }
 
-.carrossel-container {
+.navegacao-carrossel {
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     width: 100%;
-    max-width: 960px; /* Limita o tamanho máximo do carrossel */
+    max-width: 960px;
     margin: 0 auto;
+}
+
+.navegacao-carrossel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.carrossel-container {
     overflow: hidden; /* Garante que apenas 3 itens sejam visíveis */
-    background-color: #f3f4f6; /* Fundo suave para o contêiner */
-    padding: 40px 0; /* Espaço acima e abaixo do carrossel */
+    padding: 40px 0;
     border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para profundidade */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
 }
 
 .carrossel {
     display: flex;
     transition: transform 0.5s ease-in-out;
     gap: 20px; /* Espaçamento uniforme entre os itens */
-    width: calc(300px * 3 + 40px); /* Limita o carrossel a 3 itens mais o espaço entre eles */
+    padding-left: calc((100% - (300px * 3 + 40px)) / 2); /* Centraliza os itens */
+    padding-right: calc((100% - (300px * 3 + 40px)) / 2); /* Garante a mesma margem à direita */
 }
 
 .item {
-    width: 300px; /* Tamanho fixo dos depoimentos */
-    flex-shrink: 0;
+    flex: 0 0 300px; /* Largura fixa para cada item */
     text-align: center;
     padding: 20px;
-    border: 1px solid #e5e7eb; /* Cinza suave para o item */
-    box-sizing: border-box;
     background-color: #ffffff;
-    border-radius: 12px; /* Bordas arredondadas */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
-}
-
-.item {
-    opacity: 1;
-    transform: scale(1);
-    box-shadow: none;
-    transition: transform 0.5s ease, opacity 0.5s ease, box-shadow 0.5s ease;
-}
-
-.item.active {
-    transform: scale(1.1);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    opacity: 1;
-}
-
-.item.desactive {
-    transform: scale(1);
-    opacity: 1;
-    box-shadow: none;
+    border: solid black 5px;
+    transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
 /* Botões de navegação */
 .prev, .next {
-    background-color: #6366f1; /* Tom de azul suave */
+    background-color: #09222E;
     color: white;
     font-size: 1.5rem;
     border: none;
@@ -574,18 +565,148 @@ body {
 }
 
 .prev {
-    left: 10px;
+    left: -60px; /* Fora do contêiner à esquerda */
 }
 
 .next {
-    right: 10px;
+    right: -60px; /* Fora do contêiner à direita */
 }
 
-.prev:hover, .next:hover {
-    background-color: #4f46e5; /* Intensifica a cor no hover */
+hr{
+    color: black;
+    background-color: black;
+    height: 6px;
 }
 
-#depoimentos{
-    margin-bottom: 30px;
+.footer {
+    background: linear-gradient(180deg, #09222E 0%, #000000 100%);
+    color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin-top: 40px;
 }
 
+.footer-container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+/* Bloco de contato (E-mail e Instagram) */
+.contact-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 120px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+}
+
+.contact-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+}
+
+.contact-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.contact-text {
+    font-size: 14px;
+    margin: 0;
+    color: #d1d5db;
+}
+
+.divider {
+    height: 50px;
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Footer inferior com créditos */
+.footer-bottom {
+    display: flex;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Centraliza os itens verticalmente */
+    gap: 15px; /* Espaçamento uniforme entre todos os itens */
+    color: white;
+    font-size: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 10px;
+}
+
+.footer-rights {
+    margin: 0;
+}
+
+.footer-credit {
+    font-size: 14px;
+}
+
+.footer-credit strong {
+    color: #ffffff;
+}
+
+.footer-bottom img {
+    width: 30px; /* Ajusta o tamanho do logotipo */
+    height: auto;
+    margin: 0;
+}
+
+footer p {
+    color: white;
+}
+
+/* Fundo degradê do footer */
+.footer {
+    background: linear-gradient(180deg, #09222E 0%, #000000 100%);
+    color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin-top: 40px;
+    position: relative; /* Para posicionamento absoluto do cadeado funcionar */
+}
+
+.footer-container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+/* Ícone de cadeado fixo no canto inferior direito do footer */
+.footer-lock {
+    position: absolute; /* Posiciona dentro do footer */
+    bottom: 20px; /* Distância da parte inferior do footer */
+    right: 20px; /* Distância da borda direita do footer */
+    width: 60px;
+    height: 60px;
+    background-color: #09222E; /* Fundo escuro com transparência */
+    border-radius: 50%; /* Forma circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; /* Remove sublinhado do link */
+    z-index: 10; /* Garante que o ícone fique acima de outros elementos do footer */
+    transition: background-color 0.3s ease;
+}
+
+.footer-lock:hover {
+    background-color: white; /* Fundo escurece ao passar o mouse */
+}
+
+.footer-lock img {
+    width: 30px; /* Ajusta o tamanho do ícone */
+    height: auto;
+}
+
+/* Outros estilos já definidos permanecem iguais */
+.contact-box { /* Estilo existente */ }
+.footer-bottom { /* Estilo existente */ }
