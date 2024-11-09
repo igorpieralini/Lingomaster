@@ -497,9 +497,18 @@ body {
     width: 100%; /* Expande a imagem focada */
 }
 
-.imagem-preenchimento.active, .imagem-preenchimento2.active {
-    width: 50%; /* Preenche o lado oposto */
-    opacity: 1; /* Torna visível suavemente */
+.imagem-preenchimento.active {
+    position: relative;
+    width: 50%;
+    opacity: 1;
+    left: 13%;
+}
+
+.imagem-preenchimento2.active{
+    position: relative;
+    width: 50%;
+    opacity: 1;
+    left: -12%;
 }
 
 .irmaos-p{
