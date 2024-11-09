@@ -2,46 +2,48 @@
 const buttons = document.querySelectorAll(".tech-button");
 const cursos = document.querySelectorAll(".cursos > div");
 
-// Função para pausar vídeos do YouTube em iframes usando a API
-function pauseVideos() {
-    const iframes = document.querySelectorAll("iframe");
-    iframes.forEach(iframe => {
-        iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+// Função para pausar o vídeo do curso que estava visível
+function pauseVisibleVideo() {
+    cursos.forEach(curso => {
+        if (curso.style.display === "flex") {
+            const video = curso.querySelector("video");
+            if (video) {
+                video.pause(); // Pausa o vídeo se ele estiver visível
+            }
+        }
     });
 }
 
-// Função para mostrar apenas o curso selecionado
+// Função para mostrar apenas o curso selecionado e garantir que o vídeo correspondente inicie
 function showCurso(cursoClass) {
-    // Oculta todos os cursos e pausa seus vídeos
-    cursos.forEach(curso => {
-        curso.style.display = "none"; // Oculta o curso
-    });
-    pauseVideos(); // Pausa vídeos após ocultar
+    pauseVisibleVideo(); // Pausa o vídeo do curso atualmente visível
 
-    // Exibe apenas o curso correspondente
-    const cursoToShow = document.querySelector(`.${cursoClass}`);
-    if (cursoToShow) {
-        cursoToShow.style.display = "flex";
-    }
+    cursos.forEach(curso => {
+        if (curso.classList.contains(cursoClass)) {
+            curso.style.display = "flex"; // Exibe o curso selecionado
+            const video = curso.querySelector("video");
+            if (video) {
+                video.play(); // Inicia o vídeo do curso ativo
+            }
+        } else {
+            curso.style.display = "none"; // Oculta os outros cursos
+        }
+    });
 }
 
 // Configuração inicial ao carregar a página
 document.addEventListener("DOMContentLoaded", () => {
-    showCurso("curso-html"); // Exibe apenas o curso de HTML inicialmente
-    buttons[0].classList.add("active"); // Marca o botão HTML como ativo ao carregar a página
+    showCurso("curso-html"); // Exibe o curso HTML inicialmente
+    buttons[0].classList.add("active"); // Marca o botão HTML como ativo
 });
 
-// Adiciona um evento de clique a cada botão
+// Adiciona eventos de clique aos botões
 buttons.forEach(button => {
     button.addEventListener("click", () => {
-        // Remove a classe 'active' de todos os botões
-        buttons.forEach(btn => btn.classList.remove("active"));
+        buttons.forEach(btn => btn.classList.remove("active")); // Remove a classe 'active'
+        button.classList.add("active"); // Marca o botão clicado como ativo
 
-        // Adiciona a classe 'active' ao botão clicado
-        button.classList.add("active");
-
-        // Pega o texto do botão e formata como a classe de curso correspondente
         const cursoClass = `curso-${button.textContent.toLowerCase()}`;
-        showCurso(cursoClass);
+        showCurso(cursoClass); // Mostra o curso correspondente e inicia o vídeo
     });
 });

@@ -28,10 +28,14 @@ function logout() {
     window.location.href = 'login.html'; // Redirect to login
 }
 
-// Check if user is logged in, used on admin.html load
 function checkAuth() {
-    if (!localStorage.getItem('loggedInUser')) {
+    const loggedInUser = localStorage.getItem('loggedInUser');
+
+    if (!loggedInUser) {
         alert('Please log in first.');
-        window.location.href = 'login.html'; // Redirect to login if not authenticated
+        window.location.href = 'login.html'; // Redireciona para login
     }
 }
+
+// Chame essa função assim que a página admin.html for carregada
+document.addEventListener('DOMContentLoaded', checkAuth);

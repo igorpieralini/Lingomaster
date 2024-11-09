@@ -180,6 +180,12 @@ header {
     width: 100%;
 }
 
+/* Botões de tecnologia */
+.button-container {
+    display: flex;
+    width: 100%;
+}
+
 .tech-button {
     flex: 1;
     padding: 20px 0;
@@ -189,7 +195,7 @@ header {
     font-weight: bold;
     text-align: center;
     cursor: pointer;
-    transition: background-color 0.5s;
+    transition: background-color 0.5s ease;
     border: 1px solid black;
     box-shadow: inset 1px 0 2px 1px darkgray;
 }
@@ -200,58 +206,202 @@ header {
     box-shadow: none;
 }
 
+.tech-button:hover {
+    background-color: #f2f2f2;
+}
+
+/* Responsividade para botões */
 @media (max-width: 768px) {
-    .navbar {
+    .button-container {
         flex-direction: column;
     }
-    .nav-links {
-        flex-direction: column;
-        margin: 10px 0;
-    }
-    .nav-links li {
-        margin: 5px 0;
-    }
-    .logo_nav img {
-        margin: 15px 0;
+
+    .tech-button {
+        font-size: 18px;
     }
 }
 
-/* Estilos para cursos */
+/* Botões de tecnologia */
+.button-container {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.tech-button {
+    flex: 1;
+    padding: 20px 0;
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+    border: 1px solid black;
+    box-shadow: inset 1px 0 2px 1px darkgray;
+}
+
+.tech-button.active {
+    color: #E9732E;
+    border: none;
+    box-shadow: none;
+}
+
+.tech-button:hover {
+    background-color: #f2f2f2;
+}
+
+/* Responsividade para botões */
+@media (max-width: 768px) {
+    .button-container {
+        flex-direction: column;
+    }
+
+    .tech-button {
+        font-size: 18px;
+    }
+}
+
+/* Botões de tecnologia */
+.button-container {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.tech-button {
+    flex: 1;
+    padding: 20px 0;
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+    border: 1px solid black;
+    box-shadow: inset 1px 0 2px 1px darkgray;
+}
+
+.tech-button.active {
+    color: #E9732E;
+    border: none;
+    box-shadow: none;
+}
+
+.tech-button:hover {
+    background-color: #f2f2f2;
+}
+
+/* Responsividade para botões */
+@media (max-width: 768px) {
+    .button-container {
+        flex-direction: column;
+    }
+
+    .tech-button {
+        font-size: 18px;
+    }
+}
+
+/* Botões de tecnologia */
+.button-container {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.tech-button {
+    flex: 1;
+    padding: 20px 0;
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+    border: 1px solid black;
+    box-shadow: inset 1px 0 2px 1px darkgray;
+}
+
+.tech-button.active {
+    color: #E9732E;
+    border: none;
+    box-shadow: none;
+}
+
+.tech-button:hover {
+    background-color: #f2f2f2;
+}
+
+/* Responsividade para botões */
+@media (max-width: 768px) {
+    .button-container {
+        flex-direction: column;
+    }
+
+    .tech-button {
+        font-size: 18px;
+    }
+}
+
+/* Estilos dos cursos */
 .container-cursos {
     width: 100%;
-    height: 450px;
+    height: auto;
     margin-top: 70px;
     margin-bottom: 70px;
 }
 
-.curso-html,
-.curso-php,
-.curso-mysql,
-.curso-css,
-.curso-javascript,
-.curso-tailwind {
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
+.cursos > div {
+    display: none;
+    justify-content: space-between; /* Mantém vídeo e texto alinhados horizontalmente */
     align-items: center;
+    text-align: left;
+    flex-direction: row; /* Vídeo e texto lado a lado */
+    gap: 20px; /* Espaço entre vídeo e texto */
+    width: 80%; /* Limita o conteúdo a 80% da largura total */
+    margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
 }
 
-.curso-html p,
-.curso-php p,
-.curso-mysql p,
-.curso-css p,
-.curso-javascript p,
-.curso-tailwind p {
-    width: 30%;
+.cursos > div:first-child {
+    display: flex;
 }
 
-/* Estilos do iframe */
-iframe {
+/* Estilo dos parágrafos dentro dos cursos */
+.cursos p {
+    width: 40%; /* Texto ocupa 40% da largura total dos cursos */
+    font-size: 19px;
+    line-height: 1.6;
+}
+
+/* Estilos para vídeos */
+video {
     border: 2px solid black;
     border-radius: 10px;
-    width: 800px;
-    height: 450px;
+    width: 55%; /* Vídeo ocupa 55% da largura total dos cursos */
+    height: auto;
 }
+
+/* Responsividade para cursos e vídeos */
+@media (max-width: 900px) {
+    .cursos > div {
+        flex-direction: column; /* Empilha o vídeo e o texto em telas menores */
+        width: 100%; /* Ocupa 100% da largura disponível */
+    }
+
+    video {
+        width: 100%; /* Vídeo ocupa toda a largura disponível */
+    }
+
+    .cursos p {
+        width: 100%; /* Texto ocupa toda a largura disponível */
+        text-align: center; /* Centraliza o texto */
+    }
+}
+
 
 body {
     font-family: Arial, sans-serif;
