@@ -189,7 +189,6 @@ header {
 .tech-button {
     flex: 1;
     padding: 20px 0;
-    background-color: white;
     color: black;
     font-size: 20px;
     font-weight: bold;
@@ -198,6 +197,64 @@ header {
     transition: background-color 0.5s ease;
     border: 1px solid black;
     box-shadow: inset 1px 0 2px 1px darkgray;
+    background-color: #09222E80;
+}
+
+.tech-button.active {
+    color: #E9732E;
+    background-color: white;
+    border: none;
+    box-shadow: none;
+}
+
+.tech-button:hover {
+    background-color: #f2f2f2;
+}
+
+/* Responsividade para botões */
+@media (max-width: 768px) {
+    .button-container {
+        flex-direction: column;
+    }
+
+    .tech-button {
+        font-size: 18px;
+    }
+}
+
+/* Botões de tecnologia */
+.button-container {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.tech-button.active {
+    color: #E9732E;
+    border: none;
+    box-shadow: none;
+}
+
+.tech-button:hover {
+    background-color: #f2f2f2;
+}
+
+/* Responsividade para botões */
+@media (max-width: 768px) {
+    .button-container {
+        flex-direction: column;
+    }
+
+    .tech-button {
+        font-size: 18px;
+    }
+}
+
+/* Botões de tecnologia */
+.button-container {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 .tech-button.active {
@@ -231,7 +288,6 @@ header {
 .tech-button {
     flex: 1;
     padding: 20px 0;
-    background-color: white;
     color: black;
     font-size: 20px;
     font-weight: bold;
@@ -240,90 +296,7 @@ header {
     transition: background-color 0.5s ease;
     border: 1px solid black;
     box-shadow: inset 1px 0 2px 1px darkgray;
-}
-
-.tech-button.active {
-    color: #E9732E;
-    border: none;
-    box-shadow: none;
-}
-
-.tech-button:hover {
-    background-color: #f2f2f2;
-}
-
-/* Responsividade para botões */
-@media (max-width: 768px) {
-    .button-container {
-        flex-direction: column;
-    }
-
-    .tech-button {
-        font-size: 18px;
-    }
-}
-
-/* Botões de tecnologia */
-.button-container {
-    display: flex;
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-.tech-button {
-    flex: 1;
-    padding: 20px 0;
-    background-color: white;
-    color: black;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    cursor: pointer;
-    transition: background-color 0.5s ease;
-    border: 1px solid black;
-    box-shadow: inset 1px 0 2px 1px darkgray;
-}
-
-.tech-button.active {
-    color: #E9732E;
-    border: none;
-    box-shadow: none;
-}
-
-.tech-button:hover {
-    background-color: #f2f2f2;
-}
-
-/* Responsividade para botões */
-@media (max-width: 768px) {
-    .button-container {
-        flex-direction: column;
-    }
-
-    .tech-button {
-        font-size: 18px;
-    }
-}
-
-/* Botões de tecnologia */
-.button-container {
-    display: flex;
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-.tech-button {
-    flex: 1;
-    padding: 20px 0;
-    background-color: white;
-    color: black;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    cursor: pointer;
-    transition: background-color 0.5s ease;
-    border: 1px solid black;
-    box-shadow: inset 1px 0 2px 1px darkgray;
+    background-color: #09222E80;
 }
 
 .tech-button.active {
