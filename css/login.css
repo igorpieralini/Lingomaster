@@ -1,0 +1,254 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, b, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.login-container{
+    font-size: 1.3vw;
+    width: 100%;
+    background: linear-gradient(#000000, #09222e);
+    padding-bottom: 5.9%;
+}
+
+.logo-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-login img{
+    width: 30%;
+}
+
+.container-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 5px;
+}
+
+.btn{
+    font-size: 1.3vw;
+    width: 20%;
+    padding: 1%;
+    font-family: "Zilla Slab", serif;
+    border: darkgray;
+    border-radius: 10px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+#password{
+    font-size: 1.3vw;
+    width: 20%;
+    padding: 1%;
+    font-family: "Zilla Slab", serif;
+    border: darkgray;
+    border-radius: 10px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+#btn_login{
+    font-size: 1.3vw;
+    color: white;
+    width: 6%;
+    padding: 1%;
+    font-family: "Zilla Slab", serif;
+    border: darkgray;
+    border-radius: 10px;
+    font-weight: bold;
+    background-color: #E9732E;
+    margin: 10px;
+    transition: 0.7s;
+}
+
+#btn_login:hover {
+    color: black;
+    background-color: white;
+}
+
+@media (min-width: 320px) and (max-width: 576px) {
+    #password, .btn{
+        font-size: 3vw;
+        width: 40%;
+        padding: 3%;
+        font-family: "Zilla Slab", serif;
+        border: darkgray;
+        border-radius: 10px;
+        font-weight: bold;
+        margin: 10px;
+    }
+
+    #btn_login{
+        font-size: 3vw;
+        color: white;
+        width: 20%;
+        padding: 3%;
+        font-family: "Zilla Slab", serif;
+        border: darkgray;
+        border-radius: 10px;
+        font-weight: bold;
+        background-color: #E9732E;
+        margin: 10px;
+        transition: 0.7s;
+    }
+
+    .logo-login img {
+        width: 53%;
+    }
+
+    .logo-login{
+        margin-bottom: 20%;
+    }
+
+    .login-container{
+        padding-bottom: 119%;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 769px){
+    .logo-login img {
+        width: 53%;
+    }
+
+    #password, .btn{
+        font-size: 3vw;
+        width: 40%;
+        padding: 2%;
+        font-family: "Zilla Slab", serif;
+        border: darkgray;
+        border-radius: 10px;
+        font-weight: bold;
+        margin: 10px;
+    }
+
+    #btn_login{
+        font-size: 3vw;
+        color: white;
+        width: 20%;
+        padding: 2%;
+        font-family: "Zilla Slab", serif;
+        border: darkgray;
+        border-radius: 10px;
+        font-weight: bold;
+        background-color: #E9732E;
+        margin: 10px;
+        transition: 0.7s;
+    }
+
+    .login-container{
+        padding-bottom: 75.5%;
+
+    }
+}
+
+@media (min-width: 770px) and (max-width: 1024px){
+    .logo-login img {
+        width: 40%;
+    }
+
+    #password, .btn{
+        font-size: 1.5vw;
+        width: 35%;
+        padding: 1.5%;
+        font-family: "Zilla Slab", serif;
+        border: darkgray;
+        border-radius: 10px;
+        font-weight: bold;
+        margin: 10px;
+    }
+
+    #btn_login{
+        font-size: 1.5vw;
+        color: white;
+        width: 20%;
+        padding: 1.5%;
+        font-family: "Zilla Slab", serif;
+        border: darkgray;
+        border-radius: 10px;
+        font-weight: bold;
+        background-color: #E9732E;
+        margin: 10px;
+        transition: 0.7s;
+    }
+
+    .login-container{
+        padding-bottom: 75.5%;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px){
+    .logo-login img {
+        width: 35%;
+    }
+
+    #password, .btn{
+        font-size: 1.5vw;
+        width: 35%;
+        padding: 1.5%;
+        font-family: "Zilla Slab", serif;
+        border: darkgray;
+        border-radius: 10px;
+        font-weight: bold;
+        margin: 10px;
+    }
+
+    #btn_login{
+        font-size: 1.5vw;
+        color: white;
+        width: 20%;
+        padding: 1.5%;
+        font-family: "Zilla Slab", serif;
+        border: darkgray;
+        border-radius: 10px;
+        font-weight: bold;
+        background-color: #E9732E;
+        margin: 10px;
+        transition: 0.7s;
+    }
+
+    .login-container{
+        padding-bottom: 75.5%;
+    }
+}

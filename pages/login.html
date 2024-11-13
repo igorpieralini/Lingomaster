@@ -5,16 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Custom Login</title>
     <link rel="shortcut icon" href="../images/Logo%20Dark%20background.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/login.css">
 
 </head>
-<body>
-<div class="login-container">
-    <h2>Login</h2>
-    <label for="username"></label><input type="text" id="username" placeholder="Username" required>
-    <label for="password"></label><input type="password" id="password" placeholder="Password" required>
-    <button onclick="login()">Login</button>
-    <p id="error-message" style="color: red;"></p>
-</div>
-<script src="../javascript/auth.js"></script>
-</body>
+    <body>
+        <div class="login-container">
+
+            <div class="logo-login">
+                <img src="../images/Logo%20vertical%20dark%20background.png" alt="">
+            </div>
+            <div class="container-login">
+                <label for="username"></label><input type="text" id="username" class="btn" placeholder="USUÁRIO" required>
+                <label for="password"></label><input type="password" id="password" placeholder="SENHA" required>
+                <button id="btn_login" onclick="login()">LOGIN</button>
+            </div>
+            <p id="error-message" style="color: red;"></p>
+        </div>
+        <script src="../javascript/auth.js"></script>
+    </body>
 </html>

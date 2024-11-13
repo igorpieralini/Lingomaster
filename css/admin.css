@@ -1,0 +1,249 @@
+body{
+    background: linear-gradient(#000000, #09222e);
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header img{
+    width: 20%;
+}
+
+#title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2%;
+    margin-top: -30px;
+}
+
+h1{
+    font-size: 3vw;
+    font-family: "Zilla Slab", serif;
+    color: #ffffff;
+}
+
+.config{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+.itens{
+    display: flex;
+    align-items: center;
+}
+
+section h2{
+    font-size: 1.8vw;
+    font-family: "Zilla Slab", serif;
+    color: #ffffff;
+}
+
+#carousel2-imageUpload {
+    color: black;
+    background-color: #ffffff;
+    padding: 1.2%;
+    width: 65%;
+    border: solid 1px;
+    border-radius: 20px;
+}
+
+#carouselTime2{
+    width: 65%;
+    padding: 1.5%;
+    background-color: #ffffff;
+    color: black;
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 2.2vw;
+    font-family: "Zilla Slab", serif;
+}
+
+.btn{
+    font-size: 1.5vw;
+    color: white;
+    background-color: #E9732E;
+    font-family: "Zilla Slab", serif;
+    font-weight: bold;
+    border: solid 1px #E9732E;
+    border-radius: 20px;
+    width: 30%;
+    padding-bottom: 3%;
+    padding-top: 3%;
+    margin-left: 2%;
+}
+
+#carousel2-imageList {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between; /* Espaçamento uniforme */
+    align-items: center;
+    width: 100%; /* Garante que o contêiner tenha largura suficiente */
+    flex-wrap: wrap; /* Permite a quebra de linha */
+}
+
+#image-list-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.carousel2-image-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%; /* Ajuste para 3 itens por linha */
+    flex-direction: column;
+    margin: 10px; /* Espaçamento horizontal e vertical */
+    box-sizing: border-box;
+    flex: 1 0 33.33%;
+}
+
+.carousel2-image-item img {
+    width: 50%; /* Garante que a imagem respeite a largura do item */
+    margin: 5%; /* Leve margem para espaçamento */
+    border-radius: 20px;
+
+}
+
+.carousel2-image-item button {
+    margin: 2%;
+    font-size: 1.2vw;
+    width: 30%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    background-color: #E9732E;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer button{
+    margin: 2%;
+    font-size: 1.2vw;
+    width: 10%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    background-color: #E9732E;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+@media (min-width: 320px) and (max-width: 576px) {
+    body{
+        padding-bottom: 120%;
+    }
+
+    .config{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 5%;
+        flex-direction: column;
+    }
+
+    .item{
+        margin-top: 2%;
+    }
+
+    section h2{
+        font-size: 3vw;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 769px) {
+    body{
+        padding-bottom: 140%;
+    }
+
+    .config{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 5%;
+        flex-direction: column;
+    }
+
+    .item{
+        margin-top: 2%;
+    }
+
+    section h2{
+        font-size: 3.5vw;
+    }
+}
+
+@media (min-width: 770px) and (max-width: 1024px) {
+    .item{
+        margin-top: 2%;
+    }
+
+    section h2{
+        font-size: 4vw;
+    }
+
+    .config{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 5%;
+        flex-direction: column;
+    }
+
+    body{
+        padding-bottom: 140%;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+    .item{
+        margin-top: 2%;
+    }
+
+    section h2{
+        font-size: 4vw;
+    }
+
+    .config{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 5%;
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 1201px) and (max-width: 1500px) {
+    .item{
+        margin-top: 2%;
+    }
+
+    section h2{
+        font-size: 4vw;
+    }
+
+    .config{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 5%;
+        flex-direction: column;
+    }
+}

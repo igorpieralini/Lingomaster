@@ -16,16 +16,16 @@ function loadCarouselImages() {
         // Cria um novo slide para cada imagem
         const slideDiv = document.createElement('div');
         slideDiv.classList.add('carousel2-slide-item');
-        slideDiv.style.width = "100%"; // Define a largura do slide para 100%
-        slideDiv.style.flex = "0 0 100%"; // Cada slide deve ocupar 100% do contêiner de slides
+        slideDiv.style.width = "100%";
+        slideDiv.style.flex = "0 0 100%";
         slideDiv.style.height = "100%";
 
         const img = document.createElement('img');
         img.src = imageSrc;
         img.alt = 'Slide';
-        img.style.width = "100%"; // A imagem deve ocupar todo o slide
-        img.style.height = "100%"; // Ajusta a altura para cobrir o slide corretamente
-        img.style.objectFit = "cover"; // Garante que a imagem cubra todo o espaço do slide sem distorções
+        img.style.width = "100%";
+        img.style.height = "100%";
+        img.style.objectFit = "cover";
 
         slideDiv.appendChild(img);
         slideContainer.appendChild(slideDiv);
@@ -43,8 +43,8 @@ function showSlide(index) {
     if (index < 0) slideIndex = totalSlides - 1;
 
     const slideContainer = document.getElementById('carouselSlide2');
-    slideContainer.style.transform = `translateX(-${slideIndex * 100}%)`; // Move o slide para a posição correta
-    slideContainer.style.transition = "transform 0.5s ease"; // Adiciona uma transição suave
+    slideContainer.style.transform = `translateX(-${slideIndex * 100}%)`;
+    slideContainer.style.transition = "transform 0.5s ease";
 }
 
 // Funções de navegação manual
@@ -61,12 +61,10 @@ function prevSlide2() {
 // Função de auto-slide que usa o tempo configurado no admin.html
 function autoSlide() {
     const transitionTime = parseInt(localStorage.getItem('carouselTime2')) || 5; // Tempo em segundos
-    console.log(`Transição em ${transitionTime} segundos`);
-
     setTimeout(() => {
-        nextSlide2(); // Passa para o próximo slide
-        autoSlide(); // Continua o ciclo
-    }, transitionTime * 1000); // Converte segundos para milissegundos
+        nextSlide2();
+        autoSlide();
+    }, transitionTime * 1000);
 }
 
 // Função para salvar o tempo de transição no localStorage
@@ -75,7 +73,7 @@ function saveTransitionTime() {
     const time = timeInput ? timeInput.value : null;
 
     if (time) {
-        localStorage.setItem('carouselTime2', time); // Salva o valor no localStorage
+        localStorage.setItem('carouselTime2', time);
         alert('Tempo de transição salvo com sucesso!');
     } else {
         alert('Por favor, insira um tempo válido.');
@@ -88,22 +86,9 @@ function loadSavedTransitionTime() {
     const timeInput = document.getElementById('carouselTime2');
 
     if (savedTime && timeInput) {
-        timeInput.value = savedTime; // Preenche o campo com o valor salvo
+        timeInput.value = savedTime;
     }
 }
-
-// Inicializa o carrossel e a administração
-document.addEventListener('DOMContentLoaded', () => {
-    if (document.getElementById('carouselSlide2')) {
-        loadCarouselImages();
-        autoSlide(); // Inicia a troca automática de slides
-    }
-
-    if (document.getElementById('saveTimeBtn2')) {
-        loadSavedTransitionTime();
-        document.getElementById('saveTimeBtn2').addEventListener('click', saveTransitionTime);
-    }
-});
 
 // Função para carregar as imagens na administração
 function loadAdminImages() {
@@ -138,7 +123,7 @@ function deleteImage(index) {
     loadCarouselImages();
 }
 
-// Função para fazer upload de imagens
+// Função para fazer upload de imagens com compressão
 function uploadImage() {
     const uploadInput = document.getElementById('carousel2-imageUpload');
     const files = uploadInput.files;
@@ -150,9 +135,15 @@ function uploadImage() {
             reader.onload = function (event) {
                 const storedImages = JSON.parse(localStorage.getItem('carouselImages2')) || [];
                 storedImages.push(event.target.result); // Adiciona a imagem
-                localStorage.setItem('carouselImages2', JSON.stringify(storedImages));
-                loadAdminImages();
-                loadCarouselImages();
+                try {
+                    localStorage.setItem('carouselImages2', JSON.stringify(storedImages));
+                    loadAdminImages();
+                    loadCarouselImages();
+                } catch (e) {
+                    if (e.name === 'QuotaExceededError') {
+                        alert('Espaço insuficiente no armazenamento local! Exclua algumas imagens.');
+                    }
+                }
             };
 
             reader.readAsDataURL(file);
