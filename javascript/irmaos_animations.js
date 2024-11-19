@@ -6,22 +6,22 @@ document.querySelectorAll('.imagem-fundador, .imagem-fundador2').forEach((fundad
     fundador.addEventListener('mouseenter', () => {
         document.querySelectorAll('.imagem-fundador, .imagem-fundador2').forEach((other, i) => {
             if (other !== fundador) {
-                other.classList.add('hidden'); // Oculta a imagem oposta
+                other.classList.add('hidden'); // Oculta o outro fundador
             } else {
-                other.classList.add('expanded'); // Expande a imagem sob o mouse
+                other.classList.add('expanded'); // Expande o fundador destacado
             }
         });
 
-        preenchimento.classList.add('active'); // Mostra o preenchimento correspondente
+        preenchimento.classList.add('active'); // Mostra o texto correspondente
     });
 
     fundador.addEventListener('mouseleave', () => {
-        // Remove as classes com transições suaves para ambas as imagens
+        // Remove as classes e restaura o estado original para ambos os fundadores
         document.querySelectorAll('.imagem-fundador, .imagem-fundador2').forEach((other) => {
-            other.classList.remove('hidden'); // Gradualmente restaura a opacidade
-            other.classList.remove('expanded'); // Gradualmente restaura a largura original
+            other.classList.remove('hidden'); // Restaura a visibilidade do outro fundador
+            other.classList.remove('expanded'); // Restaura o tamanho original
         });
 
-        preenchimento.classList.remove('active'); // Gradualmente oculta o preenchimento
+        preenchimento.classList.remove('active'); // Oculta o texto correspondente
     });
 });

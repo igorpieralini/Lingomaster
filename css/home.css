@@ -480,8 +480,8 @@ body {
 
 .image-fundadores {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     padding: 0;
     margin: 0;
     width: 100%;
@@ -1063,6 +1063,8 @@ footer p {
 
     .carrossel {
         display: flex;
+        justify-content: center;
+        align-items: center;
         transition: none;
         gap: 0;
         padding-left: 0;
@@ -1080,14 +1082,13 @@ footer p {
         display: none;
     }
 
-    #dp1 {
-        flex: 0 0 300px;
+    .item {
+        flex: 0 0 300px; /* Largura fixa para cada item */
         text-align: center;
         padding: 20px;
         background-color: #ffffff;
         border: solid black 5px;
         transition: transform 0.5s ease, opacity 0.5s ease;
-        margin-left: 10%;
     }
 
     .contact-box {
@@ -1281,6 +1282,8 @@ footer p {
 
     .carrossel {
         display: flex;
+        justify-content: center;
+        align-items: center;
         transition: none;
         gap: 0;
         padding-left: 0;
@@ -1298,14 +1301,13 @@ footer p {
         display: none;
     }
 
-    #dp1 {
-        flex: 0 0 300px;
+    .item {
+        flex: 0 0 300px; /* Largura fixa para cada item */
         text-align: center;
         padding: 20px;
         background-color: #ffffff;
         border: solid black 5px;
         transition: transform 0.5s ease, opacity 0.5s ease;
-        margin-left: 20%;
     }
 
     .contact-box {
@@ -1500,6 +1502,8 @@ footer p {
 
     .carrossel {
         display: flex;
+        justify-content: center;
+        align-items: center;
         transition: none;
         gap: 0;
         padding-left: 0;
@@ -1517,14 +1521,15 @@ footer p {
         display: none;
     }
 
-    #dp1 {
-        flex: 0 0 300px;
+    .item {
+        flex: 0 0 314px;
+        /* align-items: center; */
         text-align: center;
         padding: 20px;
         background-color: #ffffff;
         border: solid black 5px;
         transition: transform 0.5s ease, opacity 0.5s ease;
-        margin-left: 25%;
+        margin-left: 2%;
     }
 
     .contact-box {
@@ -1743,24 +1748,14 @@ footer p {
         display: none;
     }
 
-    #dp1 {
-        flex: 0 0 270px;
+    .item {
+        flex: 0 0 314px;
         text-align: center;
         padding: 20px;
         background-color: #ffffff;
         border: solid black 5px;
         transition: transform 0.5s ease, opacity 0.5s ease;
-        margin: 2%;
-    }
-
-    #dp2{
-        flex: 0 0 270px;
-        text-align: center;
-        padding: 20px;
-        background-color: #ffffff;
-        border: solid black 5px;
-        transition: transform 0.5s ease, opacity 0.5s ease;
-        margin: 2%;
+        margin: 1%;
     }
 
     .contact-box {
@@ -1983,24 +1978,14 @@ footer p {
         display: none;
     }
 
-    #dp1 {
-        flex: 0 0 270px;
+    .item {
+        flex: 0 0 314px;
         text-align: center;
         padding: 20px;
         background-color: #ffffff;
         border: solid black 5px;
         transition: transform 0.5s ease, opacity 0.5s ease;
-        margin: 2%;
-    }
-
-    #dp2{
-        flex: 0 0 270px;
-        text-align: center;
-        padding: 20px;
-        background-color: #ffffff;
-        border: solid black 5px;
-        transition: transform 0.5s ease, opacity 0.5s ease;
-        margin: 2%;
+        margin-left: 5%;
     }
 
     .contact-box {
@@ -2246,18 +2231,18 @@ footer p {
         width: 100%;
     }
 
-    #dp4, #dp5, #dp6, #dp7 {
+    #dp3, #dp4, #dp5, #dp6, #dp7 {
         display: none;
     }
 
-    #dp1, #dp2, #dp3 {
-        flex: 0 0 270px;
+    .item {
+        flex: 0 0 314px;
         text-align: center;
         padding: 20px;
         background-color: #ffffff;
         border: solid black 5px;
         transition: transform 0.5s ease, opacity 0.5s ease;
-        margin: 2%;
+        margin-left: 4%;
     }
 
     .contact-box {
