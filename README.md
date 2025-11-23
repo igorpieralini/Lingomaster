@@ -1,9 +1,15 @@
-🛡️ O Desafio Este foi o primeiro desafio CJ da leva 2024.2 com o objetivo de evoluir os membros da Júnior FEI:
+🛡️ **The Challenge**
+This was the first CJ challenge of the 2024.2 batch, aimed at helping members of Júnior FEI to grow:
 
-Utilização de HTML e CSS para a criação das páginas. Utilizacão de Javascript para animações e interações. Este projeto não é um case OFICIAL!
+It involves using **HTML** and **CSS** to create pages, and **JavaScript** for animations and interactions. This project is **not an official case**!
 
-💻 Demonstração Tela Inicial A página inicial contém todas as informações sobre a Lingomaster:
+💻 **Demo – Home Page**
+The homepage contains all the information about **Lingomaster**.
 
-🧑‍💻 Autor Desenvolvido com 💙 por Igor Marques Pieralini, Consultor Júnior.
+🧑‍💻 **Author**
+Developed with 💙 by **Igor Marques Pieralini**, Junior Consultant.
 
-🌐 Contato Email: igor.pieralini@jrfei.com Github: https://github.com/IgorPieralini
+🌐 **Contact**
+
+* **Email**: [igor.pieralini@jrfei.com](mailto:igor.pieralini@jrfei.com)
+* **GitHub**: [https://github.com/IgorPieralini](https://github.com/IgorPieralini)
