@@ -11,5 +11,5 @@ Developed with 💙 by **Igor Marques Pieralini**, Junior Consultant.
 
 🌐 **Contact**
 
-* **Email**: [igor.pieralini@jrfei.com](mailto:igor.pieralini@jrfei.com)
+* **Email**: [igor.pieralini@jrfei.com](mailto:igorpieralini@gmail.com)
 * **GitHub**: [https://github.com/IgorPieralini](https://github.com/IgorPieralini)
